@@ -1,21 +1,40 @@
 {
-  "ecmaFeatures": {
-    "jsx": true,
-    "modules": true
-  },
+  "parser": "babel-eslint",
   "env": {
     "browser": true,
-    "node": true
+    "es6": true,
+    "jquery": true
   },
-  "parser": "babel-eslint",
-  "rules": {
-    "quotes": [2, "single"],
-    "strict": [2, "never"],
-    "react/jsx-uses-react": 2,
-    "react/jsx-uses-vars": 2,
-    "react/react-in-jsx-scope": 2
+  "extends": "airbnb",
+  "parserOptions": {
+    "sourceType": "module"
   },
   "plugins": [
     "react"
-  ]
+  ],
+  "rules": {
+    "strict": 0,
+    "no-console":0,
+    "comma-dangle": [
+      "warn",
+      "never"
+    ],
+    "linebreak-style": [
+      "warn",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    /* Advanced Rules*/
+    "no-unused-expressions": "warn",
+    "no-useless-concat": "warn",
+    "block-scoped-var": "error",
+    "consistent-return": "error"
+  }
 }
